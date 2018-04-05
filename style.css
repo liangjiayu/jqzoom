@@ -1,0 +1,72 @@
+/*jQzoom*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: block;
+    position: relative;
+    width: 1200px;
+    margin: 300px auto 0;
+}
+
+.box {
+    position: relative;
+    display: block;
+    width: 402px;
+    height: 402px;
+    border: 1px solid #ccc;
+}
+
+.box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.box .img222 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* main style */
+
+div.zoomdiv {
+    visibility: hidden;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 420px;
+    width: 402px;
+    height: 402px;
+    background: #fff;
+    border: 1px solid #CCC;
+    text-align: center;
+    overflow: hidden;
+}
+
+.zoomdiv.show {
+    visibility: visible;
+}
+
+div.jqZoomPup {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: #fede4f;
+    opacity: 0.5;
+    filter: alpha(Opacity=50);
+}
