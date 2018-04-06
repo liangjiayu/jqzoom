@@ -26,3 +26,8 @@
 - 小放大镜类名为 `.jqZoomPup`
 - 图片需要加 类名 `.zoom-img`
 - 放小图的容器则为`J_zoom`，需要相对定位，用来定位小的放大镜，容器的父级也需要相对定位，用来定位大图的放大镜
+
+
+
+#### [demo](https://htmlpreview.github.io/?https://github.com/liangjiayu/jqzoomhttps://github.com/liangjiayu/jqzoom/blob/master/index.html)
+
