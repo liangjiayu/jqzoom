@@ -21,27 +21,31 @@
         // 全局变量
         var self = $(this);
         var pup, zoom;
-        var boxTop = self.offset().top;
-        var boxLeft = self.offset().left;
+        // 容器的位置和大小变量
+        var boxTop;
+        var boxLeft;
         var boxWidth = self.width();
         var boxHeight = self.height();
         // 小图和大图的比例
         var scaleX, scaleY;
 
-        // 初始化
+        // 初始化必须的放大镜HTML 结构
         var init = function() {
-            var imgSrc = self.find('.zoom-img').attr('src');
-            self.append('<div class="jqZoomPup"></div>');
-            self.after('<div class="zoomdiv"><img src="' + imgSrc + '"></div>');
-            pup = $('.jqZoomPup');
-            zoom = $('.zoomdiv');
-            zoom.width(settings.width);
-            zoom.height(settings.height);
-        }
+                var imgSrc = self.find('.zoom-img').attr('src');
+                self.append('<div class="jqZoomPup"></div>');
+                self.after('<div class="zoomdiv"><img src="' + imgSrc + '"></div>');
+                pup = $('.jqZoomPup');
+                zoom = $('.zoomdiv');
+                zoom.width(settings.width);
+                zoom.height(settings.height);
+            }
+            // 鼠标进入 需要切换图片和 获得对应的位置数据
         var show = function() {
-            // 先切换图片
             var imgSrc = self.find('.zoom-img').attr('src');
             zoom.find('img').attr('src', imgSrc);
+
+            boxTop = self.offset().top;
+            boxLeft = self.offset().left;
 
             scaleX = zoom.find('img').width() / boxWidth;
             scaleY = zoom.find('img').height() / boxHeight;
